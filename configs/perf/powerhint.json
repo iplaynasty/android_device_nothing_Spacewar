@@ -64,8 +64,8 @@
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
         "0",
-        "30",
-        "50"
+        "20",
+        "35"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
