@@ -74,6 +74,7 @@
       "Name": "SchedBoost",
       "Path": "/proc/sys/kernel/sched_boost",
       "Values": [
+        "2",
         "1",
         "0"
       ],
