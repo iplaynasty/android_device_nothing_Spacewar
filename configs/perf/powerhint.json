@@ -121,9 +121,8 @@
       "Name": "GPUIdleTimer",
       "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
       "Values": [
-        "50",
-        "80",
-        "120"
+        "10000",
+        "58"
       ],
       "ResetOnInit": true
     },
