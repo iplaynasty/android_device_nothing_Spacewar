@@ -35,3 +35,25 @@ TARGET_ENABLE_BLUR := true
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
+
+MATRIXX_MAINTAINER := iplaynasty
+
+TARGET_CUSTOM_UDFPS := true
+
+WITH_GMS := true
+
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
+WITH_GMS_COMMS_SUITE := true
+
+WITH_BCR := true
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
+SURFACE_FLINGER_BOOST := true
+
+<!-- Whether the device supports Smart Pixels -->
+<bool name="config_supportSmartPixels">true</bool>
