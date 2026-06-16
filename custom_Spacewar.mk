@@ -13,10 +13,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/nothing/Spacewar/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/matrixx/config/common_full_phone.mk)
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := matrixx_Spacewar
+PRODUCT_NAME := custom_Spacewar
 PRODUCT_DEVICE := Spacewar
 PRODUCT_BRAND := Nothing
 PRODUCT_MODEL := A063
@@ -36,17 +36,9 @@ TARGET_ENABLE_BLUR := true
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-MATRIXX_MAINTAINER := iplaynasty
-
 TARGET_CUSTOM_UDFPS := true
 
 WITH_GMS := true
-
-TARGET_INCLUDE_PIXEL_LAUNCHER := true
-
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-
-WITH_GMS_COMMS_SUITE := true
 
 WITH_BCR := true
 
@@ -55,5 +47,10 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 SURFACE_FLINGER_BOOST := true
 
-<!-- Whether the device supports Smart Pixels -->
-<bool name="config_supportSmartPixels">true</bool>
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/pixel/certs/releasekey
+
+# 2. Bluetooth mainline module SEPolicy signed with your keys (CRITICAL)
+PRODUCT_MAINLINE_BLUETOOTH_SEPOLICY_DEV_CERTIFICATES := $(dir $(PRODUCT_DEFAULT_DEV_CERTIFICATE))
+
+# 3. Recovery can verify OTA zips signed with your keys
+PRODUCT_EXTRA_RECOVERY_KEYS := vendor/pixel/keys/releasekey
