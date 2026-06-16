@@ -64,13 +64,6 @@ vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.voice.path.for.pcm.voip=true
 
-
-# Dirac 
-persist.vendor.newdirac.dump=0
-persist.vendor.newdirac.enable.value=1.000000
-persist.vendor.newdirac.volume.value=0.000000
-persist.vendor.newdirac.cur.config=MUSIC
-
 # APK Verity
 ro.apk_verity.mode=2
 
@@ -157,7 +150,8 @@ debug.sf.predict_hwc_composition_strategy=1
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.disable_client_composition_cache=0
 debug.sf.enable_advanced_sf_phase_offset=1
-debug.sf.enable_gl_backpressure=1
+debug.sf.enable_gl_backpressure=0
+debug.sf.disable_backpressure=1
 debug.sf.frame_rate_multiple_threshold=120
 debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
