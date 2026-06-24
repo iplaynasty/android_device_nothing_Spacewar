@@ -68,6 +68,7 @@ vendor.voice.path.for.pcm.voip=true
 ro.apk_verity.mode=2
 
 # Bluetooth
+bluetooth.profile.asha.central.enabled=true
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
