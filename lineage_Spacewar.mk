@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/nothing/Spacewar/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_Spacewar
@@ -54,3 +54,7 @@ PRODUCT_MAINLINE_BLUETOOTH_SEPOLICY_DEV_CERTIFICATES := $(dir $(PRODUCT_DEFAULT_
 
 # 3. Recovery can verify OTA zips signed with your keys
 PRODUCT_EXTRA_RECOVERY_KEYS := vendor/aosp/keys/releasekey
+
+# Lunaris flags
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
