@@ -471,3 +471,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.build.tags=release-keys \
     ro.build.keys=release-keys
+
+# KProfiles
+PRODUCT_PACKAGES += \
+    KProfiles
