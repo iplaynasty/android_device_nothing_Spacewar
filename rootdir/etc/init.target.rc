@@ -406,3 +406,9 @@ on property:sys.touch.fod_en.enable=1
     write sys/bus/spi/devices/spi0.0/fts_gesture_mode 3
 on property:sys.touch.fod_en.enable=0
     write sys/bus/spi/devices/spi0.0/fts_gesture_mode 4
+
+# Allow system to manipulate KProfiles modes and parameters
+    chown system system /sys/module/kprofiles/parameters/auto_kprofiles
+    chmod 0660 /sys/module/kprofiles/parameters/auto_kprofiles
+    chown system system /sys/module/kprofiles/parameters/kp_mode
+    chmod 0660 /sys/module/kprofiles/parameters/kp_mode
